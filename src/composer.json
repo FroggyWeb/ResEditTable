@@ -1,0 +1,19 @@
+{
+  "name": "evolutioncms/resedittable",
+  "require": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "EvolutionCMS\\Resedittable\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EvolutionCMS\\Resedittable\\ResedittableServiceProvider"
+      ]
+
+    }
+  }
+}
