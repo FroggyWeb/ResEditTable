@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
 class Controller {
-    // public function index(Request $request) {
-    //     return view('resedittable::index', [
-    //     ]);
-    // }
 
     public function show(ResEditTable $resEdit, SiteContent $container, SiteContent $folder = null) {
         if ($container->id) {

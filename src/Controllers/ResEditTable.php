@@ -67,41 +67,6 @@ class ResEditTable {
     private function getDefaultConfig() {
         return [
             'show_actions' => true,
-
-            'actions' => [
-                'publish',
-                'unpublish',
-                'delete',
-                'restore',
-                'duplicate',
-            ],
-
-            'tree_config' => [
-                'icon' => '<i class="fa fa-list-alt"></i>',
-                'icon_folder_open' => "<i class='fa fa-list-alt'></i>",
-                'icon_folder_close' => "<i class='fa fa-list-alt'></i>",
-            ],
-
-            'columns' => [
-                'pagetitle' => [
-                    'caption' => __('resedittable::messages.pagetitle'),
-                    'sort' => 0,
-                    'renderer' => function ($value, $row, $config) {
-                        if ($row->isfolder) {
-                            return '
-                                <i class="fa fa-folder"></i>
-                                <a href="' . route('resedittable::show', ['container' => $config['id'], 'folder' => $row->id]) . '">' . $row->pagetitle . '</a>
-                            ';
-                        } else {
-                            return '
-                                <i class="fa fa-file-o"></i>
-                                <a href="index.php?a=27&id=' . $row->id . '" title="' . $config['lang']['edit_document'] . '" target="main">' . $row->pagetitle . '</a>
-                            ';
-                        }
-                    },
-                ],
-            ],
-
         ];
     }
     public function getResources(SiteContent $parent, array $config, $limit = 5000) {
