@@ -1,0 +1,140 @@
+.tabulator {
+    max-height: 80vh;
+    border: none;
+}
+
+.crumbs ul {
+    margin: 0 0 1em;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    & li:not(:first-child)::before {
+        content: "→";
+        margin: 0 0.25em 0 .5em;
+    }
+
+}
+
+.tabulator .tabulator-header,
+.tabulator .tabulator-footer {
+    font-size: 13px;
+    color: #8b8b8b;
+    background: #eee;
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+}
+
+.tabulator .tabulator-footer {
+    background-color: #e6e6e6;
+}
+
+.tabulator .tabulator-tableholder {
+    background-color: #eee;
+}
+
+.tabulator-sortable[aria-sort=ascending] .tabulator-arrow {
+    border-bottom-color: #56ac56 !important;
+}
+
+.tabulator-sortable[aria-sort="descending"] .tabulator-arrow {
+    border-top-color: #56ac56 !important;
+}
+
+.tabulator-header-filter input::placeholder {
+    color: #8b8b8b;
+    font-weight: normal;
+}
+
+.tabulator .tabulator-header .tabulator-col {
+    border-color: #dbdbdb;
+    background: #f1f0f0;
+}
+
+.tabulator-row .tabulator-cell {
+    border-color: #dbdbdb;
+    padding: 4px 10px;
+    cursor: auto;
+
+    &.tabulator-editable {
+        cursor: pointer;
+    }
+}
+
+.tabulator-page-size {
+    width: auto;
+}
+
+.tabulator-editable input {
+    width: 100%;
+    text-align: right;
+    padding: .25em;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.tabulator-editable input::-webkit-outer-spin-button,
+.tabulator-editable input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tabulator-row.tabulator-selectable {
+    transition: all .3s;
+}
+
+.tabulator-cell .docBtn {
+    padding: .5em;
+    margin-right: .25em;
+    color: #3481bc;
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    appearance: none;
+    transition: all .3s;
+
+    &:hover {
+        color: #149d14;
+    }
+}
+
+.icon-res {
+    margin-right: .5em;
+}
+
+input[type="checkbox"] {
+    accent-color: #3481bc;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tabulator-row.tabulator-selectable:hover {
+        background-color: #dae9da;
+    }
+}
+
+.tabulator-row.unpublished {
+    opacity: .75;
+    color: inherit;
+
+    .pubDoc {
+        color: #ff5a5a;
+    }
+}
+
+.tabulator-row.deleted {
+    color: inherit;
+
+    .res-link {
+        color: #b68282;
+        text-decoration: line-through;
+    }
+
+    .delDoc {
+        color: #ff5a5a;
+    }
+}
+
+.tabulator .tabulator-footer .tabulator-page.active {
+    background-color: #5cb85c;
+    color: #fff;
+}
