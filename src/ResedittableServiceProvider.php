@@ -28,7 +28,7 @@ class ResedittableServiceProvider extends ServiceProvider {
             dirname(__DIR__) . '/plugins/'
         );
         $this->app->registerRoutingModule('ResEditTable', __DIR__ . '/../routes.php', null, true);
-        $this->app->alias(Controllers\Resedittable::class, 'resedittable');
+        $this->app->alias(Controllers\ResEditTable::class, 'resedittable');
         //use this code for each module what you want add
         /*$this->app->registerModule(
     'module from file',
